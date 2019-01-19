@@ -1,19 +1,48 @@
 ---
 layout: default
 title: GameRoyal
-description: Ein Multiplayer-Spiel mit bis zu 4 NodeMCUs
+description: Ein Fangspiel mit Multiplayer auf dem ESP8266
 ---
 
-<br>
-<br>
-<br>
-<br>
+<br />
+<br />
+<br />
+<br />
 <h1 class="animated fadeInDown">Game ᴿᴼᵞᴬᴸ</h1>
-<p class="lead text-justify animated fadeInDown">Ein Multiplayer-Spiel mit bis zu 4 NodeMCUs</p>
-<!--<a class="btn btn-primary animated fadeInLeft waves-effect waves-light" href="anleitung">zur Anleitung</a>-->
-<hr>
+<p class="lead text-justify animated fadeInDown">Ein Fangspiel mit Multiplayer auf dem ESP8266</p>
+<a class="btn btn-primary animated fadeInLeft waves-effect waves-light" href="anleitung">zur Anleitung</a>
+<a class="btn btn-primary animated fadeInLeft waves-effect waves-light" href="konzept">Konzeptbilder</a>
+<hr />
 <div class="row animated fadeInUp">
-    <div class="col-12">
-        <span class="display-1">TBD</span>
+    <div class="col-md-6">
+        <br />
+        <div class="lead text-center">Fange die Punkte, die vom Bildschirm fallen!</div>
+        <br />
+        Ein Spiel für den ESP8266 (getestet mit einem NodeMCU). Um die herunterfallenden Punkte zu fangen, muss dei
+        Platform am unteren Bildschirmrand durch Drehen eines MPU9250 bewegt werden.
+        Es unterstützt Multiplayer mit zwei Spielern. Dabei baut ein ESP8266 einen WLAN-Hotspot auf und der andere
+        verbindet sich damit. Dann sende sie sich gegenseitig Daten über das WLAN-Netzwerk.
+    </div>
+    <div class="col-md-6">
+        <img src="/img/gameroyal/nodemcu.jpg" class="img-fluid" alt="NodeMCU with Game" />
+        <br />
+        <br />
+        <img src="/img/gameroyal/startscreen.png" class="img-fluid" id="float-left" alt="Game Start Screen" />
+        <img src="/img/gameroyal/gameplay.png" class="img-fluid" id="float-right" alt="Gameplay" />
     </div>
 </div>
+
+<style>
+    #float-left {
+        float: left;
+    }
+
+    #float-right {
+        float: right;
+    }
+
+    #block {
+        -ms-interpolation-mode: nearest-neighbor;
+        image-rendering: crisp-edges;
+    }
+</style>

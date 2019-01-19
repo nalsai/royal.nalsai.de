@@ -1,0 +1,53 @@
+---
+layout: default
+title: Kozeptbilder von GameRoyal
+---
+
+<br>
+<br>
+<br>
+<br>
+<h1 class="animated fadeInDown">Kozeptbilder von Game ᴿᴼᵞᴬᴸ</h1>
+<p class="lead text-justify animated fadeInDown">Ein Fangspiel mit Multiplayer auf dem NodeMCU</p>
+<a href="." class="btn btn-primary animated fadeInLeft">Zurück zur Seite des Spiels</a>
+<hr />
+<div class="row animated fadeInUp">
+    <div class="col-12">
+        <p class="text-justify">
+            <h3>Libraries</h3>
+            <table class="table table-responsive table-hover">
+                <tbody>
+                    <tr onClick="document.location.href='https://github.com/Bodmer/TFT_eSPI';">
+                        <td>TFT_eSPI</td>
+                        <td><a class="text-white" href="https://github.com/Bodmer/TFT_eSPI">https://github.com/Bodmer/TFT_eSPI</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h3>Kompatibilität</h3>
+            <p>
+                Kompatibel mit dem ESP8266. Getestet mit einme NodeMCU (ESP8266).<br />
+            </p>
+            <br>
+            <h3>Übertragen</h3>
+            <p>
+                Wird normal mit dem Arduino IDE übertragen. <br />
+                Der <kbd>data</kbd> Ordner muss mit
+                dem <a href="https://github.com/esp8266/arduino-esp8266fs-plugin">Arduino ESP8266 filesystem uploader</a>
+                übertragen werden.<br />
+                Beim Übertragen sollte bei Flash Size 4M (1M SPIFFS) ausgewählt sein.
+            </p>
+            <br>
+            <h3>Probleme</h3>
+            <p>
+                Falls FS.h nicht vorhanden ist, muss der ESP8266/ESP32 über sein Git-Repo. installiert werden.
+                Dafür muss https://github.com/esp8266/Arduino nach hardware im Sketchbookordner geklont werden und
+                darin
+                in tools get.py mit Python ausgeführt werden.
+                Meiner Erfahrung nach funktioniert es auch, wenn der ESP32 auf diese
+                Weise installiert ist und der ESP8266 nur über das Arduino IDE.<br />
+                Anleitung: <a href="http://esp8266.github.io/Arduino/versions/2.0.0/doc/installing.html#using-git-version">http://esp8266.github.io/Arduino/versions/2.0.0/doc/installing.html#using-git-version</a>
+            </p>
+        </p>
+    </div>
+</div>
