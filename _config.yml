@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Nils' ESO Webseite
-email: unbekanntes@outlook.com
+title: Royal Projects
+email: contact@nalsai.de
 description: >- # this means to ignore newlines until "baseurl:"
-  Die Homepage von Nils über The Elder Scrolls Online.
+  
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://eso.nalsai.de" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://royal.nalsai.de" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
