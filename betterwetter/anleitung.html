@@ -15,37 +15,37 @@ title: Anleitung zu Better Wetter
     <div class="col-12">
     <p class="text-justify">
         <h3>Libraries</h3>
-        <table class="table table-responsive table-hover">
+        <table class="table table-responsive text-white">
             <tbody>
-                <tr onClick="document.location.href='https://github.com/finitespace/BME280';">
+                <tr>
                     <td>BME280</td>
                     <td><a class="text-white" href="https://github.com/finitespace/BME280">https://github.com/finitespace/BME280</a></td>
                 </tr>
-                <tr onClick="document.location.href='https://github.com/Bodmer/TFT_eSPI';">
-                    <td>TFT_eSPI</td>
+                <tr>
+                    <td >TFT_eSPI</td>
                     <td><a class="text-white" href="https://github.com/Bodmer/TFT_eSPI">https://github.com/Bodmer/TFT_eSPI</a></td>
                 </tr>
-                <tr onClick="document.location.href='https://github.com/Bodmer/JPEGDecoder';">
+                <tr>
                     <td>JPEGDecoder</td>
                     <td><a class="text-white" href="https://github.com/Bodmer/JPEGDecoder">https://github.com/Bodmer/JPEGDecoder</a></td>
                 </tr>
-                <tr onClick="document.location.href='https://github.com/Bodmer/JSON_Decoder';">
+                <tr>
                     <td>JSON_Decoder</td>
                     <td><a class="text-white" href="https://github.com/Bodmer/JSON_Decoder">https://github.com/Bodmer/JSON_Decoder</a></td>
                 </tr>
-                <tr onClick="document.location.href='https://github.com/Bodmer/DarkSkyWeather';">
+                <tr>
                     <td>DarkSkyWeather</td>
                     <td><a class="text-white" href="https://github.com/Bodmer/DarkSkyWeather">https://github.com/Bodmer/DarkSkyWeather</a></td>
                 </tr>
-                <tr onClick="document.location.href='https://github.com/ropg/ezTime';">
+                <tr>
                     <td>ezTime (evtl. Anpassungen für neuste Version nötig)</td>
                     <td><a class="text-white" href="https://github.com/ropg/ezTime">https://github.com/ropg/ezTime</a></td>
                 </tr>
-                <tr onClick="document.location.href='https://github.com/bblanchon/ArduinoJson';">
+                <tr>
                     <td>ArduinoJson</td>
                     <td><a class="text-white" href="https://github.com/bblanchon/ArduinoJson">https://github.com/bblanchon/ArduinoJson</a></td>
                 </tr>
-                <tr onClick="document.location.href='https://github.com/Pedroalbuquerque/ESP32WebServer';">
+                <tr>
                     <td>ESP32WebServer (nur für ESP32)</td>
                     <td><a class="text-white" href="https://github.com/Pedroalbuquerque/ESP32WebServer">https://github.com/Pedroalbuquerque/ESP32WebServer</a></td>
                 </tr>
@@ -54,10 +54,10 @@ title: Anleitung zu Better Wetter
         <br>
         <h3>Kompatibilität</h3>
         <p>
-            Kompatibel mit dem ESP8266 und dem ESP32. Getestet mit einme NodeMCU (ESP8266) und einem M5Stack (ESP32).<br />
+            Kompatibel mit dem ESP8266 und dem ESP32. Getestet mit einem NodeMCU (ESP8266) und einem M5Stack (ESP32).<br />
             Die richtigen Pins werden auf dem ESP32 und dem M5Stack automatisch ausgewählt, müssen für andere Geräte aber
             eventuell geändert werden.
-            Es werden automatisch die richtigen Bibliotheken, je nach verwendendetem Mikrocontroller ausgewählt.
+            Es werden automatisch die richtigen Bibliotheken, je nach verwendetem Mikrocontroller ausgewählt.
             Die <kbd>TFT_eSPI</kbd> Bibliothek muss je nach verwendetem Display eventuell anders
             eingestellt werden (z. B. beim M5Stack).
         </p>
@@ -65,20 +65,20 @@ title: Anleitung zu Better Wetter
         <h3>Einstellungen</h3>
         <p>
             Wenn <kbd>bool SetupMode = true</kbd> ist, wird nach dem Start des Gerätes ein Access Point aufgebaut, über den eine Verbindung zum
-            WLAN hergestell werden kann. Dann muss in <kbd>ssid</kbd> und <kbd>password</kbd> nichts eingetragen sein. Auf dem Display werden dann Anweisungen dafür angezeigt.
-            Da die WLAN-Zugangsdaten (derzeit) nicht über einen Reset hinweg gespeichert werden, ist dies nicht zu empfelen, wenn die Wetterstation 
+            WLAN hergestellt werden kann. Dann muss in <kbd>ssid</kbd> und <kbd>password</kbd> nichts eingetragen sein. Auf dem Display werden dann Anweisungen dafür angezeigt.
+            Da die WLAN-Zugangsdaten (derzeit) nicht über einen Reset hinweg gespeichert werden, ist dies nicht zu empfehlen, wenn die Wetterstation 
             oft vom Strom getrennt wird. 
             Für diesen Fall kann <kbd>bool SetupMode = false</kbd> sein, dann müssen in <kbd>ssid</kbd> und <kbd>password</kbd> die SSID und das Passwort des zu
-            verwendendenen Netzwerks eingetragen werden. 
+            verwendenden Netzwerks eingetragen werden. 
             <br>
             <h5>Dark Sky Einstellungen</h5>
             In <kbd>api_key</kbd> muss der API Key von <a href="https://darksky.net/dev/">https://darksky.net/dev/</a> eingetragen werden.
             In <kbd>latitude</kbd> und <kbd>longitude</kbd> müssen Längen und Breitengrad des Ortes für die Wettervorhersage eingetragen werden.
             <br><br>
             <h5>ThingSpeak Einstellungen</h5>
-            In <kbd>channelID</kbd> muss die ID des Kanales, an den die Wetterstation ihre Messdaten senden soll eingetragen werden.
+            In <kbd>channelID</kbd> muss die ID des Kanals, an den die Wetterstation ihre Messdaten senden soll eingetragen werden.
             In <kbd>writeAPIKey</kbd> muss der Write API Key für diese.
-            In <kbd>readChannelID</kbd> muss die ID des Kanales, von dem die Messdaten einer andere Wetterstation abgerufen werden sollen. Dieser Kanal muss öffentlich sein.
+            In <kbd>readChannelID</kbd> muss die ID des Kanals, von dem die Messdaten einer andere Wetterstation abgerufen werden sollen. Dieser Kanal muss öffentlich sein.
         </p>
         <br>
         <h3>Übertragen</h3>
@@ -103,7 +103,7 @@ title: Anleitung zu Better Wetter
         <p>
             Falls FS.h nicht vorhanden ist, muss der ESP8266/ESP32 über sein Git-Repo. installiert werden.
             Dafür muss https://github.com/esp8266/Arduino oder https://github.com/espressif/arduino-esp32
-            nach hardware im Sketchbookordner geklont werden und darin 
+            nach hardware im Sketchbook-Ordner geklont werden und darin 
             in tools get.py mit Python ausgeführt werden.
             Meiner Erfahrung nach funktioniert es auch, wenn der ESP32 auf diese 
             Weise installiert ist und der ESP8266 nur über das Arduino IDE.
